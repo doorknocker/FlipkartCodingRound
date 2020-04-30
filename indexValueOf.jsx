@@ -1,5 +1,5 @@
 function indexValueOf(input){
-    let posToStart= 0 ;
+    let posToStart= 0 ; // this will store the index we should start at IN order to increase performance
 
     //this is to determine the position where we can start looking thereby reducing the number of iterations (for performance)
     for(let i= 0 ; i<=input.length ; i++){
@@ -7,6 +7,7 @@ function indexValueOf(input){
             if(i=== input[i])
                 return i ;
             else{
+                //since the array is sorted
                 posToStart= input[i] ;
                 break ;
             }
